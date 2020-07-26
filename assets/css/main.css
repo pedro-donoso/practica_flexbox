@@ -1,0 +1,109 @@
+:root{
+    --color-header: rgb(10, 10, 110);
+    --color-nav: rgb(29, 134, 175);
+    --color-nav-dark:rgb(28, 52, 75);
+    --color-section: purple;
+    --color-aside:rgb(153, 132, 10);
+    --color-footer:rgb(25, 0, 255);
+    --color-white:#fff;
+    --color-black:#000;
+}
+
+*{
+margin: 0;
+padding: 0;
+text-decoration: none;
+list-style: none;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Times New Roman'
+}
+
+header{
+    background-color: var(--color-header);
+    color: var(--color-white);
+    line-height: 5;
+    text-align: center;
+}
+
+nav{
+    background-color: var(--color-nav);
+}
+
+@media screen and (min-width:798px){
+    .nav-container{
+        display: flex;
+    }
+
+    .nav-container__item{
+        flex-grow: 1;
+    }
+} 
+
+.nav-container__item{
+text-align: center;
+line-height: 2.5;
+border-bottom: solid 1px var(--color-white);
+}
+
+.nav-container__item:hover{
+    background-color: var(--color-nav-dark);
+}
+
+.nav-container__link{
+    color: var(--color-white);
+    display: block;
+    width: 100%;
+}
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+@media screen and (min-width: 1024px){
+    .main-container{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .main-container__section{
+        flex-basis: 75%;
+    }
+
+    .main-container__aside{
+        flex-basis: 25%;
+    }
+}
+
+.main-container__section{
+    background-color: var(--color-section);
+    color: var(--color-white);
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container__aside{
+    background-color: var(--color-aside);
+    color: var(--color-white);
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer{
+    background-color: var(--color-footer);
+    color: var(--color-white);
+    line-height: 5;
+    text-align: center;
+    margin-top: auto; /*siempre abajo*/
+}
+
